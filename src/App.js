@@ -1,25 +1,62 @@
-import logo from './logo.svg';
 import './App.css';
+import Instructions from './components/Instructions.js';
+import IffGame from './components/IffGame'
+import { Routes, Route, Link } from 'react-router-dom';
+import axios from 'axios';
+import { useState, useEffect } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+const App = () => {
+
+
+
+    const [player, setPlayer] = useState([]);
+
+    useEffect(() => {
+    axios({
+        url: "https://www.balldontlie.io/api/v1/stats",
+        method: "GET",
+        params: {
+            page: Math.floor(Math.random()* 61690)
+        }
+        
+    })
+        .then( (response) => {
+
+        setPlayer(response.data);
+        })
+
+    }, []);
+
+    const randomizePlayer = () => {
+        const playerNumber = Math.floor(Math.random()*25);
+
+        const specificPlayer=player.data[playerNumber];
+
+        console.log(specificPlayer)
+    }
+
+    randomizePlayer();
+
+    console.log(player)
+
+    return(
+    <div>
+        <nav className="menu">
+            <ul>
+                <li>
+                    <Link to="/"><h1>IFF LOGO</h1></Link>
+                </li>
+            </ul>
+        </nav>
+
+        <Routes>
+            <Route path="/" element={ <Instructions /> } />
+            <Route path="/IffGame" element={ <IffGame /> } />
+        </Routes>
     </div>
-  );
+    );
 }
 
 export default App;
+
