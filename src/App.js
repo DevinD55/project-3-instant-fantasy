@@ -1,7 +1,7 @@
 import './App.css';
 import Instructions from './components/Instructions.js';
 import IffGame from './components/IffGame'
-import { Routes, Route, Link } from 'react-router-dom';
+// import { Routes, Route, Link } from 'react-router-dom';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 
@@ -28,32 +28,34 @@ const App = () => {
 
     }, []);
 
-    const randomizePlayer = () => {
-        const playerNumber = Math.floor(Math.random()*25);
+    // const randomizePlayer = () => {
+    //     const playerNumber = Math.floor(Math.random()*25);
 
-        const specificPlayer=player.data[playerNumber];
+    //     const specificPlayer = player.data[playerNumber];
 
-        console.log(specificPlayer)
-    }
+    //     console.log(specificPlayer)
+    // }
 
-    randomizePlayer();
+    // randomizePlayer();
 
-    console.log(player)
+    // console.log(player)
 
     return(
     <div>
         <nav className="menu">
             <ul>
-                <li>
-                    <Link to="/"><h1>IFF LOGO</h1></Link>
-                </li>
+                <li>IFF!</li>
             </ul>
         </nav>
-
-        <Routes>
+        <div className = "gameContainer">
+            < Instructions />
+            < IffGame playerData={player}/>
+        </div>
+        
+        {/* <Routes>
             <Route path="/" element={ <Instructions /> } />
             <Route path="/IffGame" element={ <IffGame /> } />
-        </Routes>
+        </Routes> */}
     </div>
     );
 }

@@ -1,19 +1,28 @@
 import { Fragment } from "react"
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import SpecificPLayer from './SpecificPlayer';
 
 
 const IffGame = (props) => {
 
+    console.log("IffFame", props)
+
+    // const randomPlayer = () => {
+    //     const gameNumber = (Math.floor(Math.random()*25))
+    //     console.log("randomPlayer has run");
+    //     console.log(gameNumber)
+    // }
+
+    // randomPlayer();
+
+
     return(
         <Fragment>
             <div className="playerOne">
-            <h3>Draft Player!</h3>
-            <button></button>
+                <SpecificPLayer draftablePlayers={props.playerData.data} />
             </div>
             <div className="playerTwo">
-                <h3>Draft Player!</h3>
-                {/* Each player container at this point should have a button on it to randomize the player id number. The above info shold be stored in a new component called specificPlayer. */}
+                <SpecificPLayer draftablePlayers={props.playerData.data} />
             </div>
         </Fragment>
     )
