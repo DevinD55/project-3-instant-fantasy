@@ -1,5 +1,4 @@
-import { Fragment } from "react"
-// import { Link } from 'react-router-dom'
+import { Fragment, useState } from "react"
 import SpecificPLayer from './SpecificPlayer';
 
 
@@ -7,22 +6,20 @@ const IffGame = (props) => {
 
     console.log("IffFame", props)
 
-    // const randomPlayer = () => {
-    //     const gameNumber = (Math.floor(Math.random()*25))
-    //     console.log("randomPlayer has run");
-    //     console.log(gameNumber)
-    // }
+    const [draftNumber, setDraftNumber] = useState();
 
-    // randomPlayer();
-
+    const draftPlayer = () => {
+        const draftedPlayer = Math.floor(Math.random()*25);
+        setDraftNumber(draftedPlayer);
+    }
 
     return(
         <Fragment>
             <div className="playerOne">
-                <SpecificPLayer draftablePlayers={props.playerData.data} />
+                <SpecificPLayer draftablePlayers={props.playerData} />
             </div>
             <div className="playerTwo">
-                <SpecificPLayer draftablePlayers={props.playerData.data} />
+                <SpecificPLayer draftablePlayers={props.playerData} />
             </div>
         </Fragment>
     )

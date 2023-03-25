@@ -10,7 +10,7 @@ const App = () => {
 
 
 
-    const [player, setPlayer] = useState([]);
+    const [playerData, setPlayerData] = useState([]);
 
     useEffect(() => {
     axios({
@@ -23,22 +23,11 @@ const App = () => {
     })
         .then( (response) => {
 
-        setPlayer(response.data);
+        setPlayerData(response.data);
         })
 
     }, []);
 
-    // const randomizePlayer = () => {
-    //     const playerNumber = Math.floor(Math.random()*25);
-
-    //     const specificPlayer = player.data[playerNumber];
-
-    //     console.log(specificPlayer)
-    // }
-
-    // randomizePlayer();
-
-    // console.log(player)
 
     return(
     <div>
@@ -49,16 +38,12 @@ const App = () => {
         </nav>
         <div className = "gameContainer">
             < Instructions />
-            < IffGame playerData={player}/>
+            < IffGame playerData={playerData}/>
         </div>
-        
-        {/* <Routes>
-            <Route path="/" element={ <Instructions /> } />
-            <Route path="/IffGame" element={ <IffGame /> } />
-        </Routes> */}
     </div>
     );
 }
 
 export default App;
 
+// 
