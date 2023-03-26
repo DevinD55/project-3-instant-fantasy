@@ -16,7 +16,8 @@ const App = () => {
         url: "https://www.balldontlie.io/api/v1/stats",
         method: "GET",
         params: {
-            page: Math.floor(Math.random()* 44840),
+            page: Math.floor(Math.random()* 11211),
+            per_page: 100,
             seasons: [
                 1984, 1985, 1986, 1987, 1988, 1989,
                 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999,
@@ -37,8 +38,8 @@ const App = () => {
 
     return(
     <div>
-        <nav className="menu">
-            <ul>
+        <nav>
+            <ul className="menu">
                 <li>Instant Fanntasy Face-Off</li>
             </ul>
         </nav>

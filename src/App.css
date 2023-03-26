@@ -34,10 +34,10 @@ li {
 h1{
   font-family: 'Open Sans', sans-serif;
   font-size: 1.7rem;
-  line-height: 1.3rem;
+  line-height: 1.5rem;
   color: var(--brand-red);
   max-width: 800px;
-  margin: 7.5%;
+  margin: 4% 7.5%;
   font-weight: bold;
 }
 
@@ -62,9 +62,9 @@ em {
 h2{
   font-size: 1.5rem;
   margin: 20px 0;
-  text-align: center;
-  border-bottom: 3px solid var(--black);
+  border-bottom: 2px solid var(--black);
   padding-bottom: 8px;
+  text-align: center;
 }
 
 h3{
@@ -87,9 +87,13 @@ h5 {
 /* Header Styles */
 
 .menu {
-  text-align: center;
   height: 7vh;
-  background-color: #2b50aa;
+  background-image: linear-gradient(33deg, var(--brand-red), var(--brand-blue));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+color: var(--brand-white);
 }
 
 /* instruction styles */
@@ -108,7 +112,7 @@ h5 {
 .playerDisplay {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   margin-top: 50px;
 }
 
@@ -116,17 +120,19 @@ h5 {
   width: 45%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   color: var(--brand-white);
 }
 
-.playerDisplay div button{
+.draftedPlayer button{
   width: 100%;
-  border: 2px solid var(--black);
+  border: 1px solid var(--black);
   font-size: 1.3rem;
   padding: 5px;
-
+  align-self: end;
+  background-image: linear-gradient(33deg, var(--brand-red), var(--brand-blue));
+  color: var(--brand-white)
 }
+
 .playerOne{
   background-color: var(--brand-blue);
 }
@@ -137,21 +143,27 @@ h5 {
 
 /* Stats Styles */
 
+.playerInformation{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  min-height: 300px;
+  height: fit-content;
+}
+
 .statsContainer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  height: 200px;
-  margin-top: 20px;
 }
 
 .statsContainer p {
   margin: 5px 15px;
   font-size: 1.7rem;
-  width: 25%;
-  max-width: 50px;;
+  max-width: 75px;
 }
 
 /* footer style */
