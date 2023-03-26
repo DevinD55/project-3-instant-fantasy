@@ -16,7 +16,7 @@ const Instructions = (props) => {
                     <ul className="rulesList">
                         <li><em>1.</em> Press "Draft Player" to randomly select a player.</li>
                         <li><em>2.</em> After player 1 and 2 are drafted, compare stats to see who wins each category. In all categories other than <strong>Turnovers</strong> the higher number wins.</li>
-                        <li><em>3.</em> The player who wins 4+ categories wins the matchup!</li>
+                        <li><em>3.</em> The player who wins majority of categories wins the matchup!</li>
                     </ul>
                     <h2>When To Play:</h2>
                     <ul className="whenToPlay">

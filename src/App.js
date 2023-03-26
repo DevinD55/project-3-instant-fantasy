@@ -40,7 +40,7 @@ const App = () => {
     <div>
         <nav>
             <ul className="menu">
-                <li>Instant Fanntasy Face-Off</li>
+                <li>Instant Fantasy Face-Off</li>
             </ul>
         </nav>
         <div className = "gameContainer">
