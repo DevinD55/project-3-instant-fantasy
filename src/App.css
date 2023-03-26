@@ -4,13 +4,25 @@
   --brand-red: #e71d36;
   --black: #151515;
   --gray: #cdd3ce;
+  --accent-blue: #53917e;
 } 
+
+*{
+  margin: 0;
+  padding: 0;
+}
 
 body {
   font-size: 125%;
   font-family: 'Inconsolata', monospace;
   background-color: var(--gray);
   color: var(--black);
+}
+
+.wrapper {
+  max-width: 1200px;
+  width: 85%;
+  margin: 0 auto;
 }
 
 /* Typography */
@@ -21,30 +33,131 @@ li {
 
 h1{
   font-family: 'Open Sans', sans-serif;
-  font-size: 2rem;
-  color: var(--brand-red)
+  font-size: 1.7rem;
+  line-height: 1.3rem;
+  color: var(--brand-red);
+  max-width: 800px;
+  margin: 7.5%;
+  font-weight: bold;
+}
+
+h1 span{
+  color: var(--brand-blue);
+  text-decoration: none;
+  margin: 2% 0;
+}
+
+span {
+  display: block;
+  margin: 5px;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 em {
-  color: var(--brand-blue)
+  color: var(--brand-blue);
+  font-weight: bold;
 }
 
 h2{
   font-size: 1.5rem;
+  margin: 20px 0;
+  text-align: center;
+  border-bottom: 3px solid var(--black);
+  padding-bottom: 8px;
 }
 
 h3{
   font-size: 1.5rem;
+  text-align: center;
 }
+
 
 h4{
   font-size: 1.2rem;
   font-weight: lighter;
+  text-align: center;
 }
 
-.wrapper {
-  max-width: 1200px;
-  width: 85%;
-  margin: 0 auto;
+h5 {
+  font-size: 1rem;
+  text-align: center;
 }
 
+/* Header Styles */
+
+.menu {
+  text-align: center;
+  height: 7vh;
+  background-color: #2b50aa;
+}
+
+/* instruction styles */
+
+.rulesList {
+  margin: 2%;
+}
+
+.whenToPlay {
+  margin: 2%;
+}
+
+
+/* Player display styles */
+
+.playerDisplay {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 50px;
+}
+
+.playerDisplay div {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--brand-white);
+}
+
+.playerDisplay div button{
+  width: 100%;
+  border: 2px solid var(--black);
+  font-size: 1.3rem;
+  padding: 5px;
+
+}
+.playerOne{
+  background-color: var(--brand-blue);
+}
+
+.playerTwo{
+  background-color: var(--brand-red);
+}
+
+/* Stats Styles */
+
+.statsContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  margin-top: 20px;
+}
+
+.statsContainer p {
+  margin: 5px 15px;
+  font-size: 1.7rem;
+  width: 25%;
+  max-width: 50px;;
+}
+
+/* footer style */
+
+.footer{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}

@@ -1,6 +1,7 @@
 import './App.css';
 import Instructions from './components/Instructions.js';
 import IffGame from './components/IffGame'
+import Footer from './components/Footer';
 // import { Routes, Route, Link } from 'react-router-dom';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
@@ -35,7 +36,7 @@ const App = () => {
 
 
     return(
-    <div className="wrapper">
+    <div>
         <nav className="menu">
             <ul>
                 <li>Instant Fanntasy Face-Off</li>
@@ -44,6 +45,7 @@ const App = () => {
         <div className = "gameContainer">
             < Instructions />
             < IffGame playerData={playerData}/>
+            < Footer />
         </div>
     </div>
     );

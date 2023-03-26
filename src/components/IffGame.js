@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react"
+import { Fragment} from "react"
 import SpecificPLayer from './SpecificPlayer';
 
 
@@ -6,16 +6,9 @@ const IffGame = (props) => {
 
     console.log("IffFame", props)
 
-    const [draftNumber, setDraftNumber] = useState();
-
-    const draftPlayer = () => {
-        const draftedPlayer = Math.floor(Math.random()*25);
-        setDraftNumber(draftedPlayer);
-    }
-
     return(
         <Fragment>
-            <section className="playerDisplay">
+            <section className="playerDisplay wrapper">
                 <div className="playerOne">
                     <SpecificPLayer draftablePlayers={props.playerData} />
                 </div>
