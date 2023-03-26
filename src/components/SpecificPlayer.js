@@ -1,15 +1,25 @@
-import { Fragment, } from 'react';
+import { Fragment, useState } from 'react';
 import StatsContainer from './StatsContainer';
 
 const SpecificPlayer = (props) => {
 
     console.log("specific", props)
+    const [draftNumber, setDraftNumber] = useState("");
+    const [draftStatus, setDraftStatus] = useState(false)
+
+    const draftPlayer = () => {
+        const draftedPlayer = Math.floor(Math.random()*25);
+        setDraftNumber(draftedPlayer);
+        console.log(draftNumber)
+        setDraftStatus(true)
+    }
+
+    console.log(draftStatus)
 
     return(
         <Fragment>
-            <h3>Player Name</h3>
-            {/* <StatsContainer draftablePlayers={props.draftablePlayers.data} draftedPlayer={draftNumber}/> */}
-            <button>Draft Player</button>
+            {draftStatus && <StatsContainer playerData={props.draftablePlayers.data} draftedPlayer={draftNumber}/> }
+            <button onClick={draftPlayer}>Draft Player</button>
         </Fragment>
     )
 }
