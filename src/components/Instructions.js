@@ -9,13 +9,21 @@ const Instructions = (props) => {
 
     return(
         <Fragment>
-            <h1>Love fantasy sports? <span>Hate the long term commitment?</span> Play in an <em>INSTANT</em> with IFF</h1>
-            <h2>Learn How To Play:</h2>
-            <p>Rules: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint, beatae dolorem itaque aliquam officia, nostrum pariatur nesciunt obcaecati assumenda totam enim rem inventore. Porro, veniam architecto aliquid commodi voluptatibus neque.
-            Molestias minus aliquid perspiciatis consectetur, facere, accusantium temporibus quos dolore, dolor nesciunt cupiditate iste velit illum at beatae ipsam ex nam tempore? Autem aliquid delectus facere quibusdam saepe consectetur quos!</p>
-            <a className="btn">
-                {/* <Link to="/IffGame">Face-Off!</Link> */}
-            </a>
+            <section className="instructions">
+                <h1>Love fantasy sports? <span>Hate the long term commitment?</span> Play in an <em>INSTANT</em> with IFF</h1>
+                <h2>Learn How To Play:</h2>
+                <ul className="rulesList">
+                    <li>1. Press "Draft Player" to randomly select a player.</li>
+                    <li>2. After player 1 and 2 are drafted, compare stats to see who wins each category. In all categories other than <strong>Turnovers</strong> the higher number wins.</li>
+                    <li>3. The player who wins 4+ categories wins the matchup!</li>
+                </ul>
+                <h2>When To Play:</h2>
+                <ul className="whenToPlay">
+                    <li>1. Settle a small bill!</li>
+                    <li>2. Decide who's right about that thing you're always arguing about</li>
+                    <li>3. Settle long standing familial rivalries without resorting to violence... again.</li>
+                </ul>
+            </section>
         </Fragment>
         
         

@@ -7,8 +7,8 @@ console.log("Stats", props)
     return(
         <Fragment>
             <h3>Name: {props.playerData[props.draftedPlayer].player.first_name} {props.playerData[props.draftedPlayer].player.last_name}</h3>
-            <h3>Team: {props.playerData[props.draftedPlayer].team.full_name}</h3>
-            <h3>Game: {props.playerData[props.draftedPlayer].game.season}</h3>
+            <h4>Team: {props.playerData[props.draftedPlayer].team.full_name}</h4>
+            <h4>Game: {props.playerData[props.draftedPlayer].game.season}</h4>
             <ul className="statsContainer">
                 <li>
                     <h4>Pts</h4>

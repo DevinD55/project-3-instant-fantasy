@@ -15,12 +15,14 @@ const IffGame = (props) => {
 
     return(
         <Fragment>
-            <div className="playerOne">
-                <SpecificPLayer draftablePlayers={props.playerData} />
-            </div>
-            <div className="playerTwo">
-                <SpecificPLayer draftablePlayers={props.playerData} />
-            </div>
+            <section className="playerDisplay">
+                <div className="playerOne">
+                    <SpecificPLayer draftablePlayers={props.playerData} />
+                </div>
+                <div className="playerTwo">
+                    <SpecificPLayer draftablePlayers={props.playerData} />
+                </div>
+            </section>
         </Fragment>
     )
 }
