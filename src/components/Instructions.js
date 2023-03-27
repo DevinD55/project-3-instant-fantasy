@@ -9,9 +9,14 @@ const Instructions = (props) => {
 
     return(
         <Fragment>
-            <section className="instructions">
-                <h1>Love fantasy sports? <span>Hate the long term commitment?</span> Play in an <em>INSTANT</em> with IFF!</h1>
-                <div className="wrapper">
+            <section className="instructions wrapper">
+                <div className ="welcomeContainer">
+                    <div className="logoContainer">
+
+                    </div>
+                    <h1>Love fantasy sports? <span>Hate the long term commitment?</span> Play in an <em>INSTANT</em> with IFF!</h1>
+                </div>
+                <div>
                     <h2>How To Play:</h2>
                     <ul className="rulesList">
                         <li><em>1.</em> Press "Draft Player" to randomly select a player.</li>

@@ -26,7 +26,7 @@ body {
 }
 
 .gameContainer{
-  height: 90vh;
+  height: 95vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -40,12 +40,9 @@ li {
 
 h1{
   font-family: 'Open Sans', sans-serif;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   line-height: 1.5rem;
-  max-width: 800px;
-  margin: 0 7.5%;
   font-weight: bold;
-  padding-top: 50px;
 }
 
 h1 span{
@@ -94,7 +91,7 @@ h5 {
 /* Header Styles */
 
 .menu {
-  height: 10vh;
+  height: 5vh;
   background-image: linear-gradient(33deg, var(--brand-red), var(--brand-blue));
   display: flex;
   justify-content: center;
@@ -102,6 +99,23 @@ h5 {
   font-size: 1.5rem;
   color: var(--brand-white);
   text-align: center;
+}
+
+.welcomeContainer{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoContainer{
+  width: 200px;
+  height: 200px;
+  background-image: url(./assets/IFF-logo.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 /* instruction styles */
