@@ -24,7 +24,7 @@ const Instructions = (props) => {
                         <div>
                             <h2>How To Play:</h2>
                             <ul className="list">
-                                <li><em>1.</em> Pick a year to draft in, then press "Face-Off"</li>
+                                <li><em>1.</em> Pick any year from 1984-2022 to draft in, then press "Face-Off"</li>
                                 <li><em>2.</em> On the next screen, draft two players. </li>
                                 <li><em>3.</em>Compare stats to see who wins each category. In all categories other than <strong>Turnovers</strong> the higher number wins.</li>
                                 <li><em>4.</em> The player who wins majority of categories wins the matchup!</li>
