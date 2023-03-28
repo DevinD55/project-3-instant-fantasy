@@ -4,40 +4,42 @@ const StatsContainer = (props) => {
 
 console.log("Stats", props)
 
+    const playerStat = props.playerData[props.draftedPlayer]
+
     return(
         <Fragment>
             <section className="playerInformation">
-                <h3><span>Name:</span> {props.playerData[props.draftedPlayer].player.first_name} {props.playerData[props.draftedPlayer].player.last_name}</h3>
-                <h4><span>Team:</span> {props.playerData[props.draftedPlayer].team.full_name}</h4>
-                <h4><span>Season:</span> {props.playerData[props.draftedPlayer].game.season}</h4>
+                <h3><span>Name:</span> {playerStat.player.first_name} {playerStat.player.last_name}</h3>
+                <h4><span>Team:</span> {playerStat.team.full_name}</h4>
+                <h4><span>Season:</span> {playerStat.game.season}</h4>
                 <ul className="statsContainer">
                     <li>
                         <h5>Pts</h5>
-                        <p>{props.playerData[props.draftedPlayer].pts}</p>
+                        <p>{playerStat.pts}</p>
                     </li>
                     <li>
                         <h5>Reb</h5>
-                        <p>{props.playerData[props.draftedPlayer].reb}</p>
+                        <p>{playerStat.reb}</p>
                     </li>
                     <li>
                         <h5>Ast</h5>
-                        <p>{props.playerData[props.draftedPlayer].ast}</p>
+                        <p>{playerStat.ast}</p>
                     </li>
                     <li>
                         <h5>Blk</h5>
-                        <p>{props.playerData[props.draftedPlayer].blk}</p>
+                        <p>{playerStat.blk}</p>
                     </li>
                     <li>
                         <h5>Stl</h5>
-                        <p>{props.playerData[props.draftedPlayer].stl}</p>
+                        <p>{playerStat.stl}</p>
                     </li>
                     <li>
                         <h5>TO</h5>
-                        <p>{props.playerData[props.draftedPlayer].turnover}</p>
+                        <p>{playerStat.turnover}</p>
                     </li>
                     <li>
                         <h5>FG%</h5>
-                        <p>{props.playerData[props.draftedPlayer].fg_pct}</p>
+                        <p>{((playerStat.fg_pct)*100).toFixed(2)}</p>
                     </li>
                 </ul>
             </section>

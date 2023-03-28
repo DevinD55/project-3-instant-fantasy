@@ -7,13 +7,19 @@
   --accent-blue: #53917e;
 } 
 
+.sr-only{
+  display: none;
+}
+
 *{
   margin: 0;
   padding: 0;
 }
 
+
 body {
   font-size: 125%;
+  min-width: 375px;
   font-family: 'Inconsolata', monospace;
   background-color: var(--gray);
   color: var(--black);
@@ -21,12 +27,12 @@ body {
 
 .wrapper {
   max-width: 1200px;
-  width: 85%;
+  width: 90%;
   margin: 0 auto;
 }
 
 .gameContainer{
-  height: 95vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -37,6 +43,7 @@ body {
 li {
   list-style: none;
 }
+
 
 h1{
   font-family: 'Open Sans', sans-serif;
@@ -88,45 +95,100 @@ h5 {
   text-align: center;
 }
 
+.totalContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
 /* Header Styles */
 
-.menu {
+.menu a{
   height: 5vh;
-  background-image: linear-gradient(33deg, var(--brand-red), var(--brand-blue));
+  background-image: linear-gradient(233deg, var(--brand-red), var(--brand-blue));
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
   color: var(--brand-white);
   text-align: center;
+  font-weight: bold;
+}
+
+.instructions{
+  display: flex;
 }
 
 .welcomeContainer{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  width: 50%;
+  height: 650px;
+  background-image: url(./assets/InstructionBackground.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .logoContainer{
-  width: 200px;
-  height: 200px;
-  background-image: url(./assets/IFF-logo.png);
-  background-position: center;
+  width: 150px;
+  height: 150px;
+  background-image: url(./assets/IffLogo.png);
   background-size: contain;
+  background-position: center;
   background-repeat: no-repeat;
+}
+
+.logoSloganContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10px;
 }
 
 /* instruction styles */
 
-.rulesList {
-  margin: 2%;
+.list li{
+  margin-top: 2px;
 }
 
-.whenToPlay {
-  margin: 2%;
+.rulesContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 600px;
 }
+
+.draftYearForm{
+  display: flex;
+  flex-direction: column;
+}
+
+input{
+  height: 1.5rem;
+  text-align: center;
+  margin: 5px 0;
+  background-image: linear-gradient(11deg, var(--brand-red), var(--brand-blue));
+  color: var(--brand-white);
+  border: 2px solid var(--black)
+}
+
+/* IFFGame styles */
+
+.iffGame {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 80vh;
+  height: fit-content;
+  margin-bottom: 10px;
+}
+
+.tipsContainer p{
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
 
 /* Player display styles */
 
@@ -145,14 +207,20 @@ h5 {
   color: var(--brand-white);
 }
 
-.draftedPlayer button{
+button{
   width: 100%;
-  border: 1px solid var(--black);
+  border: 2px solid var(--black);
   font-size: 1.3rem;
   padding: 5px;
   align-self: end;
-  background-image: linear-gradient(270deg, var(--brand-red), var(--brand-blue));
+  background-image: linear-gradient(250deg, var(--accent-blue), var(--brand-blue));
   color: var(--brand-white)
+}
+
+button:hover{
+  transition-timing-function: linear;
+  transition: all 0.2s;
+  transform: scale(1.05);
 }
 
 .playerOne .playerInformation{
@@ -162,6 +230,7 @@ h5 {
 .playerTwo .playerInformation {
   background-color: var(--brand-red);
 }
+
 
 /* Stats Styles */
 
@@ -193,11 +262,47 @@ h5 {
 .footer{
   display: flex;
   justify-content: center;
-  height:fit-content;
-  background-image: linear-gradient(137deg, var(--brand-red), var(--brand-blue));
+  align-items: center;
+  height: 7vh;
+  background-image: linear-gradient(290deg, var(--brand-red), var(--brand-blue));
 }
 
 .footer a {
   color: var(--brand-white);
-  margin: 15px 0;
+
+}
+
+@media (max-width:750px){
+  .welcomeContainer{
+    display: none;
+  }
+
+  .rulesContainer{
+    font-size:smaller;
+  }
+
+  .tipsContainer {
+    font-size: smaller;
+  }
+}
+
+@media (max-width:450px) {
+  h1{
+    font-size: 1rem;
+  }
+
+  .rulesContainer li{
+    font-size: 1rem;
+    margin: 2%;
+  }
+
+  
+
+  .logoContainer{
+    display: none;
+  }
+
+  .menu a{
+    font-size: 1rem;
+  }
 }
