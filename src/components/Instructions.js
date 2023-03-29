@@ -18,7 +18,7 @@ const Instructions = (props) => {
                             <div className="logoContainer">
 
                             </div>
-                            <h1>Love fantasy sports? <span>Hate the long term commitment?</span> Play in an <em>INSTANT</em> with IFF!</h1>
+                            <h1>Love fantasy basketball? <span>Hate the long term commitment?</span> Play in an <em>INSTANT</em> with IFF!</h1>
                         </div>
                             
                         <div>

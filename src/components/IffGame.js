@@ -52,7 +52,7 @@ const IffGame = (props) => {
                     <p>The database includes stats for all games! Even the players who didn't play a single minute. To ensure a fun, fair matchup, follow the tips below, or embrace the randomness! </p>
                     <li><em>1.</em> If a player has no stats, draft again!</li>
                     <li><em>2.</em> To ensure a good matchup, agree you will re-draft until both players have 5+ points.</li>
-                    <li><em>3.</em> Remember! The higher number wins every category other than <strong>Turnovers.</strong>
+                    <li><em>3.</em> Remember! The higher number wins except category other than <strong>Turnovers.</strong>
                         </li>
                     </ul>
                 </div>

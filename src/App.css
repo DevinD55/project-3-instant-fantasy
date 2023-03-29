@@ -56,9 +56,10 @@ h1 span{
   color: var(--brand-blue);
   text-decoration: none;
   margin: 2% 0;
+  display: block
 }
 
-span {
+.playerInformation span {
   display: block;
   margin: 5px;
   font-weight: bold;
@@ -123,7 +124,7 @@ h5 {
 .welcomeContainer{
   width: 50%;
   height: 650px;
-  background-image: url(./assets/InstructionBackground.png);
+  background-image: url(./assets/InstructionBackground1.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -261,7 +262,7 @@ button:hover{
 
 .footer{
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   height: 7vh;
   background-image: linear-gradient(290deg, var(--brand-red), var(--brand-blue));
@@ -296,13 +297,27 @@ button:hover{
     margin: 2%;
   }
 
-  
+  .menu a{
+    font-size: 1rem;
+  }
 
-  .logoContainer{
+  .footer{
+    justify-content: center;
+  }
+
+  .footer a{
+    margin: 0 5px;
+  }
+
+  .footer span{
     display: none;
   }
 
-  .menu a{
-    font-size: 1rem;
+  .instructions{
+    height: 700px;
+  }
+
+  .tipsContainer{
+    font-size: smaller;
   }
 }
