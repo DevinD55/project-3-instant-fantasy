@@ -1,13 +1,11 @@
-import { Fragment, useEffect } from 'react';
+import { useEffect } from 'react';
 
 const StatsContainer = (props) => {
 
-console.log("Stats", props)
 
     const playerStat = props.playerData[props.draftedPlayer]
 
     return(
-        <Fragment>
             <section className="playerInformation">
                 <h3><span>Name:</span> {playerStat.player.first_name} {playerStat.player.last_name}</h3>
                 <h4><span>Team:</span> {playerStat.team.full_name}</h4>
@@ -43,7 +41,6 @@ console.log("Stats", props)
                     </li>
                 </ul>
             </section>
-            </Fragment>
     )
 }
 

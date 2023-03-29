@@ -1,13 +1,11 @@
-import { Fragment, useState, useEffect} from "react"
+import { useState, useEffect} from "react"
 import SpecificPLayer from './SpecificPlayer';
 import axios from 'axios';
 import { Link, useParams } from 'react-router-dom';
-// import PlayerMatchup from "./PlayerMatchup";
 
 
 const IffGame = (props) => {
 
-    console.log("IffFame", props)
 
     const [draftStatus, setDraftStatus] = useState(false)
     const [playerData, setPlayerData] = useState([]);
@@ -16,7 +14,6 @@ const IffGame = (props) => {
     const urlParams = useParams();
     const searchUserSeason = () => {
         userSelectedSeason.push(urlParams.draftYear)
-        console.log(userSelectedSeason)
     }
 
     searchUserSeason();
@@ -25,12 +22,10 @@ const IffGame = (props) => {
     useEffect(() => {
     axios({
         url: "https://www.balldontlie.io/api/v1/stats",
-        method: "GET",
         params: {
             page: Math.floor(Math.random()* 207),
             per_page: 100,
             seasons: userSelectedSeason, 
-            // player_ids: userSelectedPlayers
         }
         
     })
@@ -44,7 +39,6 @@ const IffGame = (props) => {
 
 
     return(
-        <Fragment>
             <section className="iffGame wrapper">
                 <div className="tipsContainer">
                     <h2>Tips:</h2>
@@ -68,8 +62,6 @@ const IffGame = (props) => {
                     <button>Pick a new draft year!</button>
                 </Link>
             </section>
-            
-        </Fragment>
     )
 }
 

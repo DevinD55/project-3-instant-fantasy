@@ -21,9 +21,12 @@ const App = () => {
         <Routes>
             <Route path="/" element={ <Instructions />} />
             <Route path="/IffGame/:draftYear" element={ <IffGame />} />
+            <Route path="/IffGame/" />
             <Route path="*" element={ <Error />} />
             <Route path="IffGame/undefined" element ={ <Error />} />
             <Route path="IffGame/NaN" element ={ <Error />} />
+            <Route path="IffGame/null" element ={ <Error />} />
+
         </Routes>
 
         <Footer />

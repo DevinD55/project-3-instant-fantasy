@@ -3,7 +3,6 @@ import StatsContainer from './StatsContainer';
 
 const SpecificPlayer = (props) => {
 
-    console.log("specific", props)
     const [draftNumber, setDraftNumber] = useState("");
     const [draftStatus, setDraftStatus] = useState(false)
     
@@ -11,11 +10,8 @@ const SpecificPlayer = (props) => {
     const draftPlayer = () => {
         const draftedPlayer = Math.floor(Math.random()*100);
         setDraftNumber(draftedPlayer);
-        console.log(draftNumber)
         setDraftStatus(true)
     }
-
-    console.log(draftStatus)
 
     return(
         <Fragment>
