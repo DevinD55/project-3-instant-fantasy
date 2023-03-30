@@ -20,6 +20,10 @@ html { box-sizing: border-box;}
   padding: 0;
 }
 
+:focus{
+  border: 2px solid yellow;
+}
+
 
 body {
   font-size: 125%;
