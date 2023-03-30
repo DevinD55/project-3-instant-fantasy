@@ -20,7 +20,7 @@ html { box-sizing: border-box;}
   padding: 0;
 }
 
-:focus{
+:focus-visible{
   border: 2px solid yellow;
 }
 
